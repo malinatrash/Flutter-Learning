@@ -1,0 +1,4 @@
+#Thu Mar 09 00:12:37 IRKT 2023
+base.0=/Users/malinatrash/Library/Mobile Documents/com~apple~CloudDocs/develop/Flutter/Flutter-Learning/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
