@@ -1,31 +1,29 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(const MyApp());
+void main() => runApp(const MaterialApp(
+      home: App(),
+    ));
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
+class App extends StatelessWidget {
+  const App({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    int count = 0;
-    return MaterialApp(
-      theme: ThemeData(primaryColor: Colors.white),
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text("My first App"),
-        ),
-        body: const Center(
-            child: Text(
-          'sdfsf',
-          style: TextStyle(fontSize: 40, color: Colors.blue),
-        )),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            count += 1;
-          },
-          child: const Text('+'),
-        ),
-      ),
+    return Scaffold(
+      appBar: AppBar(),
+      body: SafeArea(
+          child: Column(
+        children: const [
+          CircleAvatar(
+            backgroundImage: NetworkImage(
+                "https://avatars.githubusercontent.com/u/82772036?v=4"),
+            radius: 90,
+          ),
+          Text(
+            "Pavel Naumov",
+            style: TextStyle(fontSize: 45, fontWeight: FontWeight.bold),
+          )
+        ],
+      )),
     );
   }
 }
